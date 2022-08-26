@@ -159,12 +159,19 @@ body {
   column-gap: 50px;
 }
 
-.mail,
-.telephone {
+.icon-header {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-contact-link {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  display: block;
+  display: flex;
+  align-items: center;
 
   font-weight: 500;
   font-size: 14px;
@@ -173,18 +180,29 @@ body {
   color: var(--secondary-text-color);
 }
 
-.contacts .mail:hover,
-.contacts .telephone:hover,
-.contacts .mail:focus,
-.contacts .telephone:focus {
+.header-contact-link:hover,
+.header-contact-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* =====================/header-styles===================== */
 
 /* =====================hero-styles===================== */
 .hero {
-  background-color: var(--hero-bg-color);
+  margin: 0 auto;
+
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  max-width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -238,6 +256,24 @@ body {
 
 /* =================features styles================ */
 .features {
+}
+
+.feature-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features-list {
@@ -319,19 +355,99 @@ body {
 }
 
 .team-member-position {
+  padding-bottom: 16px;
+
   text-align: center;
 
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-text-color);
 }
+
+.social-list {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-theme-color);
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--main-theme-color);
+}
 /* =================/our team - styles================ */
+
+/* =================our clients - styles================ */
+.clients {
+}
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+.clients-item {
+}
+
+.clients-link {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+}
+
+.clients-logo-icon {
+  width: 160px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: none;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.clients-link:hover .clients-logo-icon,
+.clients-link:focus .clients-logo-icon {
+  fill: var(--accent-color);
+}
+
+/* =================/our clients - styles================ */
 
 /* =================footer styles================ */
 .main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-bg-color);
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -376,6 +492,48 @@ body {
   color: var(--accent-color);
 }
 
+.footer-social {
+  /* padding-top: 72px; */
+  /* padding-bottom: 100px; */
+  margin-left: 70px;
+}
+
+.foter-social-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+
+  margin-bottom: 20px;
+
+  color: var(--main-theme-color);
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-social-item {
+}
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-theme-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
 /* =================/footer styles================ */
 
 /* =================portfolio.html styles================ */
@@ -432,8 +590,10 @@ body {
   gap: 30px;
 }
 
-.portfolio-list-item {
-  border-bottom: 1px solid var(--border-color);
+.portfolio-list-item:hover {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .item {
