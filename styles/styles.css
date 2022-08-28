@@ -178,6 +178,11 @@ body {
   fill: currentColor;
 }
 
+.icon-header.telephone {
+  width: 10px;
+  height: 16px;
+}
+
 .header-contact-link {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -366,7 +371,7 @@ body {
 }
 
 .team-member-position {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 
   text-align: center;
 
@@ -389,12 +394,12 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: var(--main-theme-color);
+  fill: var(--social-list-icon-fill);
 }
 
 .social-list-icon {
   width: 20px;
   height: 20px;
-  fill: var(--social-list-icon-fill);
 }
 
 .social-list-link:hover,
@@ -424,19 +429,18 @@ body {
 
   width: 170px;
   height: 92px;
+
+  fill: var(--social-list-icon-fill);
 }
 
 .clients-logo-icon {
-  width: 160px;
+  width: 106px;
   height: 60px;
-  fill: var(--social-list-icon-fill);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  border: none;
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
 }
 
 .clients-link:hover .clients-logo-icon,
@@ -495,8 +499,6 @@ body {
 }
 
 .footer-social {
-  /* padding-top: 72px; */
-  /* padding-bottom: 100px; */
   margin-left: 70px;
 }
 
@@ -524,11 +526,11 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: var(--footer-social-link-color);
+  fill: var(--main-theme-color);
 }
 .footer-social-icon {
   width: 20px;
   height: 20px;
-  fill: var(--main-theme-color);
 }
 
 .footer-social-link:hover,
@@ -572,9 +574,8 @@ body {
   background-color: var(--accent-color);
   color: var(--main-theme-color);
 
-  box-shadow: 0px 3px 1px var(--portfolio-card-shadow-color1),
-    0px 1px 2px var(--portfolio-card-shadow-color2),
-    0px 2px 2px var(--portfolio-card-shadow-color3);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-list {
@@ -583,8 +584,12 @@ body {
   gap: 30px;
 }
 
-.portfolio-list-item:hover {
-  border: 1px solid var(--portfolio-card-border-color);
+.project-link {
+  display: inline-block;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -598,7 +603,6 @@ body {
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
-
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
